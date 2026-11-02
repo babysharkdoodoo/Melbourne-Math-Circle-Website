@@ -9,7 +9,7 @@ export const CSS = `
   html { scroll-behavior: smooth; }
   body, #root {
     font-family: 'Switzer', sans-serif;
-    color: #263238;
+    color: #12334f;
     background: #ffffff;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -38,7 +38,7 @@ export const CSS = `
   .pill {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 7px 14px; border-radius: 999px;
-    background: #e7e8e3; color: #45616b;
+    background: #e3edf5; color: #24587e;
     font-size: .76rem; font-weight: 600;
     letter-spacing: .06em; text-transform: uppercase;
   }
@@ -55,21 +55,21 @@ export const CSS = `
     will-change: transform;
   }
   .btn-primary {
-    background: #45616b; color: #fff;
+    background: #24587e; color: #fff;
     box-shadow: 0 12px 30px rgba(23,104,158,.18);
   }
   .btn-primary:hover {
-    transform: translateY(-2px); background: #45616b;
+    transform: translateY(-2px); background: #24587e;
     box-shadow: 0 16px 40px rgba(23,104,158,.25);
   }
   .btn-primary:disabled { opacity: .6; cursor: not-allowed; transform: none; }
 
   .btn-secondary {
-    background: transparent; color: #45616b;
+    background: transparent; color: #24587e;
     border: 1.5px solid rgba(23,104,158,.28);
   }
   .btn-secondary:hover {
-    transform: translateY(-2px); border-color: #45616b;
+    transform: translateY(-2px); border-color: #24587e;
     background: rgba(23,104,158,.05);
   }
 
@@ -87,21 +87,21 @@ export const CSS = `
   /* ── Typography helpers ── */
   .section-kicker {
     font-size: .75rem; font-weight: 700; letter-spacing: .14em;
-    text-transform: uppercase; color: #45616b; margin-bottom: 14px;
+    text-transform: uppercase; color: #24587e; margin-bottom: 14px;
   }
   .section-kicker-light {
     font-size: .75rem; font-weight: 700; letter-spacing: .14em;
-    text-transform: uppercase; color: #e7e8e3; margin-bottom: 14px;
+    text-transform: uppercase; color: #e3edf5; margin-bottom: 14px;
   }
   .section-title {
     font-size: clamp(2rem,4vw,3.2rem); line-height: 1.12;
-    font-weight: 400; color: #263238; letter-spacing: -0.02em;
+    font-weight: 400; color: #12334f; letter-spacing: -0.02em;
   }
   .section-text {
-    color: #263238; line-height: 1.85; font-size: 1rem; font-weight: 300;
+    color: #12334f; line-height: 1.85; font-size: 1rem; font-weight: 300;
   }
   .divider {
-    width: 44px; height: 2px; background: #45616b;
+    width: 44px; height: 2px; background: #24587e;
     border-radius: 999px; margin: 18px 0;
   }
 
@@ -146,14 +146,14 @@ export const CSS = `
   .feature-icon {
     width: 48px; height: 48px; border-radius: 16px;
     display: grid; place-items: center;
-    background: #e7e8e3; color: #45616b; margin-bottom: 16px;
+    background: #e3edf5; color: #24587e; margin-bottom: 16px;
   }
 
   .step-card {
     display: flex; align-items: flex-start; gap: 14px;
     padding: 20px 22px; border-radius: 18px;
     border: 1px solid rgba(23,104,158,.10);
-    background: #f4f3ef; color: #263238;
+    background: #f4f7fa; color: #12334f;
     line-height: 1.65;
     transition: border-color .2s ease, transform .2s ease, background .2s ease;
   }
@@ -166,7 +166,7 @@ export const CSS = `
     flex: 0 0 auto;
     width: 36px; height: 36px; border-radius: 12px;
     display: grid; place-items: center;
-    background: #e7e8e3; color: #45616b; font-weight: 800;
+    background: #e3edf5; color: #24587e; font-weight: 800;
     font-size: .88rem;
   }
 
@@ -242,19 +242,19 @@ export const CSS = `
   .field { display: flex; flex-direction: column; gap: 8px; }
   .field label {
     font-size: .78rem; font-weight: 600;
-    letter-spacing: .07em; text-transform: uppercase; color: #263238;
+    letter-spacing: .07em; text-transform: uppercase; color: #12334f;
   }
   .field input, .field textarea {
     font-family: 'Switzer', sans-serif;
     font-size: .95rem; font-weight: 300;
     padding: 13px 16px; border-radius: 12px;
     border: 1.5px solid rgba(23,104,158,.18);
-    background: #f4f3ef; color: #263238;
+    background: #f4f7fa; color: #12334f;
     outline: none; resize: vertical;
     transition: border-color .2s ease, box-shadow .2s ease;
   }
   .field input:focus, .field textarea:focus {
-    border-color: #45616b;
+    border-color: #24587e;
     box-shadow: 0 0 0 3px rgba(23,104,158,.10);
   }
   .field input::placeholder, .field textarea::placeholder { color: #a0b8c8; }
@@ -264,14 +264,14 @@ export const CSS = `
     display: flex; align-items: flex-start; gap: 14px;
     padding: 20px 22px; border-radius: 18px;
     border: 1px solid rgba(23,104,158,.12);
-    background: #f4f3ef;
+    background: #f4f7fa;
     transition: border-color .2s ease;
   }
   .info-chip:hover { border-color: rgba(23,104,158,.4); }
   .chip-icon {
     width: 40px; height: 40px; border-radius: 12px; flex-shrink: 0;
     display: grid; place-items: center;
-    background: #e7e8e3; color: #45616b;
+    background: #e3edf5; color: #24587e;
   }
 
   /* ── Misc ── */
@@ -294,23 +294,23 @@ export const CSS = `
     letter-spacing: .08em; text-transform: uppercase;
     margin-bottom: 4px;
   }
-  .level-beginner { color: #45616b; }
-  .level-intermediate { color: #263238; }
+  .level-beginner { color: #24587e; }
+  .level-intermediate { color: #12334f; }
   .level-advanced { color: #264a6c; }
-  .level-all { color: #45616b; }
+  .level-all { color: #24587e; }
 
   /* ── Hero variants ── */
   .hero-light {
     min-height: 60vh;
     position: relative; overflow: hidden;
-    background: linear-gradient(180deg,#ffffff 0%,#f4f3ef 58%,#ffffff 100%);
+    background: linear-gradient(180deg,#ffffff 0%,#f4f7fa 58%,#ffffff 100%);
     padding: clamp(68px,10vw,124px) 0 clamp(56px,7vw,92px);
     display: flex; align-items: center;
   }
   .hero-dark {
     min-height: 48vh;
     display: flex; align-items: center;
-    background: linear-gradient(160deg, #263238 0%, #45616b 100%);
+    background: linear-gradient(160deg, #12334f 0%, #24587e 100%);
     position: relative; overflow: hidden;
     padding: clamp(72px,10vw,110px) 0;
   }
@@ -343,7 +343,7 @@ export const CSS = `
 
   /* ── Dark CTA section (shared bottom of pages) ── */
   .cta-dark {
-    background: linear-gradient(180deg,#263238 0%,#263238 100%);
+    background: linear-gradient(180deg,#12334f 0%,#12334f 100%);
     padding: clamp(72px,10vw,116px) 0;
     position: relative; overflow: hidden;
   }

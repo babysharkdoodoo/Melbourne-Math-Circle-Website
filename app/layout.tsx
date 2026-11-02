@@ -2,18 +2,20 @@
 import BackToTop from "@/components/back-to-top";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import AnnouncementBanner from "@/components/announcement-banner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import type React from "react";
 import "./globals.css";
 import "./circle.css";
+import "./nav-pages.css";
 
 // Site Metadata
 export const metadata: Metadata = {
   title: "Melbourne Math Circle",
   description:
-    "Free, student-led math sessions and outreach in Melbourne, Florida. A local chapter of Orlando Math Circle.",
+    "Student-led math education, learning materials, and school outreach in Melbourne, Florida. A chapter of Orlando Math Circle.",
   icons: {
     icon: { url: "/mmc_logo.jpg", type: "image/jpeg" },
     shortcut: "/mmc_logo.jpg",
@@ -41,6 +43,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col overflow-x-hidden">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <AnnouncementBanner />
           <Header />
           <main className="flex-grow relative">{children}</main>
           <Footer />

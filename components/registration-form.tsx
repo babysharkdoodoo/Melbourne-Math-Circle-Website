@@ -149,7 +149,7 @@ export default function RegistrationForm() {
         toast({
           title: "Registration Submitted",
           description:
-            "Thank you! You’ll receive RSVP links via email for upcoming events.",
+            "Thank you! You’re registered for program updates. The monthly meeting series has concluded.",
         });
       } else {
         toast({

@@ -20,20 +20,7 @@ export default function InteractiveGeometryExplorer({ height = 400 }: Interactiv
   const [parameter2, setParameter2] = useState(80) // second side for rectangle, etc.
   const [showHint, setShowHint] = useState(false)
   const [stars, setStars] = useState(0)
-  const [funFact, setFunFact] = useState("")
   const canvasRef = useRef<HTMLCanvasElement>(null)
-
-  const geometryFacts = [
-    "The sum of the angles in any triangle is always 180 degrees.",
-    "A circle has the largest area for a given perimeter among all closed curves.",
-    "The diagonal of a square with side length s is s√2.",
-    "The area of a regular hexagon with side length s is (3√3/2)s².",
-    "The volume of a sphere is (4/3)πr³, where r is the radius.",
-  ]
-
-  useEffect(() => {
-    setFunFact(geometryFacts[Math.floor(Math.random() * geometryFacts.length)])
-  }, [])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -361,17 +348,6 @@ export default function InteractiveGeometryExplorer({ height = 400 }: Interactiv
               )}
             </motion.div>
           )}
-
-          <motion.div
-            className="bg-teal/5 p-3 rounded-lg text-sm mt-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            <p>
-              <span className="font-bold text-teal">Fun Fact:</span> {funFact}
-            </p>
-          </motion.div>
         </div>
       </Tabs>
     </div>

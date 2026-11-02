@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 
-const circleLinks = [{ name: "Our story", href: "/about" }, { name: "The people", href: "/team" }, { name: "In pictures", href: "/gallery" }, { name: "Meetings", href: "/events" }];
-const mathLinks = [{ name: "Topics & problems", href: "/topics" }, { name: "Resources", href: "/resources" }, { name: "Math Bites", href: "/math-bites" }];
+const circleLinks = [{ name: "Our story", href: "/about" }, { name: "The people", href: "/team" }, { name: "In pictures", href: "/gallery" }, { name: "Volunteer", href: "/volunteers" }, { name: "For schools", href: "/for-schools" }];
+const mathLinks = [{ name: "Topics & problems", href: "/topics" }, { name: "Resources", href: "/resources" }, { name: "Math Bites", href: "/math-bites" }, { name: "Printable activities", href: "/printable-activities" }, { name: "Study plans", href: "/study-plans" }];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -44,7 +44,7 @@ export default function Header() {
       <Link href="/join-us" className="header-join">Join the circle <ArrowUpRight size={19} /></Link>
       <button className="mobile-menu-toggle" ref={menuButton} aria-label="Open menu" aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(true)}><Menu size={26} /></button>
       {open && <div ref={dialog} className="mobile-navigation" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Navigation">
-        <div className="mobile-menu-top"><span>Find your way.</span><button ref={closeButton} aria-label="Close menu" onClick={closeMenu}><X size={30} /></button></div>
+        <div className="mobile-menu-top"><span>Menu</span><button ref={closeButton} aria-label="Close menu" onClick={closeMenu}><X size={30} /></button></div>
         <nav aria-label="Mobile navigation">{[...circleLinks, ...mathLinks, { name: "Contact us", href: "/contact" }].map(link => <Link href={link.href} key={link.href} onClick={() => setOpen(false)}>{link.name}<ArrowUpRight size={26} /></Link>)}<Link className="mobile-join" href="/join-us">Join the circle <ArrowUpRight size={26} /></Link></nav>
       </div>}
     </header>

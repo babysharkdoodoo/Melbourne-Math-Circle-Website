@@ -16,7 +16,7 @@ import { FONTS, CSS } from "@/lib/design-tokens";
 const GRADES = ["all", "elementary", "middle", "high", "open"];
 const SKILLS = ["all", "starter", "builder", "solver", "olympiad"];
 
-function choose(n, k) {
+function choose(n: number, k: number) {
   if (k < 0 || k > n) return 0;
   k = Math.min(k, n - k);
   let res = 1;
@@ -24,7 +24,7 @@ function choose(n, k) {
   return Math.round(res);
 }
 
-function buildProblem(seed, variant) {
+function buildProblem(seed: number, variant: number) {
   const template = seed % 10;
 
   if (template === 0) {
@@ -47,7 +47,7 @@ function buildProblem(seed, variant) {
     const people = 10 + (variant % 20);
     return {
       id: seed,
-      title: `${people} People at a Party`,
+      title: `Handshakes among ${people} people`,
       topic: "Combinatorics",
       difficulty: "warm-up",
       grades: ["elementary", "middle", "high"],
@@ -77,7 +77,7 @@ function buildProblem(seed, variant) {
     const n = 13 + (variant % 20);
     return {
       id: seed,
-      title: `Pigeonhole Group of ${n}`,
+      title: `Birth months in a group of ${n}`,
       topic: "Combinatorics",
       difficulty: "warm-up",
       grades: ["elementary", "middle", "high"],
@@ -187,19 +187,19 @@ function generateProblems(count = 100) {
   return Array.from({ length: count }, (_, i) => buildProblem(i + 1, i + 1));
 }
 
-function labelGrade(v) {
+function labelGrade(v: string) {
   if (v === "all") return "All grades";
   if (v === "elementary") return "Elementary";
   if (v === "middle") return "Middle";
   if (v === "high") return "High school";
-  return "Open";
+  return "All ages";
 }
 
-function labelSkill(v) {
+function labelSkill(v: string) {
   if (v === "all") return "All skills";
-  if (v === "starter") return "Starter";
-  if (v === "builder") return "Builder";
-  if (v === "solver") return "Solver";
+  if (v === "starter") return "Beginner";
+  if (v === "builder") return "Intermediate";
+  if (v === "solver") return "Advanced";
   return "Olympiad";
 }
 
@@ -209,8 +209,8 @@ export default function FunMathProblemsPage() {
   const [grade, setGrade] = useState("all");
   const [skill, setSkill] = useState("all");
   const [index, setIndex] = useState(0);
-  const [show, setShow] = useState(null); // "hint" | "solution" | null
-  const [done, setDone] = useState({});
+  const [show, setShow] = useState<"hint" | "solution" | null>(null);
+  const [done, setDone] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
     let alive = true;
@@ -276,7 +276,7 @@ export default function FunMathProblemsPage() {
     setShow(null);
   }
 
-  function markDone(id) {
+  function markDone(id: number) {
     setDone((prev) => ({ ...prev, [id]: !prev[id] }));
   }
 
@@ -404,15 +404,11 @@ export default function FunMathProblemsPage() {
         <section className="section-space soft-grid">
           <div className="container">
             <div className="max-w-3xl">
-              <div className="pill">
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#17689e" }} />
-                One problem at a time
-              </div>
               <h1 className="serif title" style={{ marginTop: 18, maxWidth: 760 }}>
-                Fun Math Problems
+                Practice problems
               </h1>
               <p className="muted" style={{ marginTop: 16, maxWidth: 650, fontSize: "1rem" }}>
-                Pick a level, then move through the problems one by one. No giant board, no clutter, just a simple flow.
+                Choose a grade and difficulty level. Work through a problem, then open its hint or solution to check your reasoning.
               </p>
             </div>
           </div>
@@ -489,15 +485,12 @@ export default function FunMathProblemsPage() {
             >
               {current ? (
                 <>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 16 }}>
-                    <span className="meta">{current.topic}</span>
-                    <span className="meta">{current.difficulty}</span>
-                    <span className="meta">{done[current.id] ? "Done" : "In progress"}</span>
-                  </div>
+
 
                   <h2 className="serif" style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)", lineHeight: 1.05, fontWeight: 400, color: "#0a2d44", marginBottom: 12 }}>
                     {current.title}
                   </h2>
+                  <p className="practice-context">Topic: {current.topic} · Difficulty: {current.difficulty}</p>
 
                   <p style={{ color: "#0a2d44", lineHeight: 1.9, fontSize: "1rem", marginBottom: 18 }}>
                     {current.body}
@@ -568,7 +561,7 @@ export default function FunMathProblemsPage() {
 
                   <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
                     <div style={{ color: "#6d8798", fontSize: ".9rem" }}>
-                      {current.grades.map((g) => labelGrade(g)).join(" · ")} 
+                      {current.grades.map((g) => labelGrade(g)).join(" · ")}
                     </div>
                     <div style={{ color: "#6d8798", fontSize: ".9rem" }}>
                       {current.skills.map((s) => labelSkill(s)).join(" · ")}
@@ -589,8 +582,8 @@ export default function FunMathProblemsPage() {
             </div>
 
             <div style={{ maxWidth: 820, margin: "18px auto 0", display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-              <Link href="/join-us" className="btn btn-secondary">
-                Join an event <ArrowRight size={14} />
+              <Link href="/topics" className="btn btn-secondary">
+                Topic guides <ArrowRight size={14} />
               </Link>
               <Link href="/contact" className="btn btn-primary">
                 Submit a problem <ArrowRight size={14} />

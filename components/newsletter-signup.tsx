@@ -22,7 +22,7 @@ export default function NewsletterSignup() {
     <div className="text-center">
       <h3 className="font-mono text-2xl font-bold text-indigo-900 mb-2">Stay Updated</h3>
       <p className="text-indigo-900/70 mb-6">
-        Subscribe to our newsletter to receive updates about upcoming meetings and mathematical activities.
+        The monthly meeting series has concluded. Subscribe for general program updates.
       </p>
 
       {submitted ? (

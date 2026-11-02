@@ -14,21 +14,21 @@ export default function CounterGame() {
 
   function reset() {
     if (timer.current) clearTimeout(timer.current);
-    setLeft(15); setTurn("you"); setMessage("Fresh start. You go first.");
+    setLeft(15); setTurn("you"); setMessage("The board is reset. You go first.");
   }
 
   function take(amount: number) {
     if (turn !== "you" || amount > left) return;
     const after = left - amount;
     setLeft(after);
-    if (after === 0) { setTurn("won"); setMessage("You got the last one. Nicely played!"); return; }
-    setTurn("computer"); setMessage(`You took ${amount}. My turn…`);
+    if (after === 0) { setTurn("won"); setMessage("You took the last counter. You win!"); return; }
+    setTurn("computer"); setMessage(`You removed ${amount}. The computer is choosing.`);
     timer.current = setTimeout(() => {
       const reply = after % 4 || 1;
       const remaining = after - reply;
       setLeft(remaining);
       setTurn(remaining === 0 ? "lost" : "you");
-      setMessage(remaining === 0 ? `I took ${reply} and got the last one. Try a different first move?` : `I took ${reply}. Your turn.`);
+      setMessage(remaining === 0 ? `The computer removed ${reply} and took the last counter. Play again?` : `The computer removed ${reply}. Choose your next move.`);
     }, 650);
   }
 
@@ -39,10 +39,10 @@ export default function CounterGame() {
         {Array.from({ length: 15 }, (_, i) => <span key={i} className={`counter ${i >= left ? "counter-gone" : ""}`} aria-hidden="true" />)}
       </div>
       <p className="game-message" aria-live="polite" aria-atomic="true">{message}</p>
-      <div className="game-actions" aria-label="Choose how many counters to take">
+      <div className="game-actions" aria-label="Choose your move">
         {[1, 2, 3].map(n => <button key={n} onClick={() => take(n)} disabled={turn !== "you" || n > left}>Take {n}</button>)}
       </div>
-      <details className="game-hint"><summary>What’s the trick?</summary><p>Work backward. With four counters left, whoever goes next loses against careful play. Can you keep leaving your opponent a multiple of four? Start with 15 and see what your first move should be.</p></details>
+      <details className="game-hint"><summary>What’s the trick?</summary><p>Suppose you leave the computer 4 counters. Whatever it takes, you can take the rest. The same idea works with 8 or 12 counters. How many should you remove from 15 to leave 12?</p></details>
     </div>
   );
 }

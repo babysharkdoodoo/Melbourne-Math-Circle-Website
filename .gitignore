@@ -2,3 +2,10 @@
 node_modules/
 
 .next/
+
+# Local secrets and generated files
+.env*
+!.env.example
+*.tsbuildinfo
+*.log
+.DS_Store
