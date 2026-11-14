@@ -32,7 +32,7 @@ html.mmc-site body { font-family: Switzer, Arial, sans-serif; background: var(--
 .mobile-navigation nav a { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 58px; text-decoration: none; font-size: clamp(24px, 5vw, 36px); font-weight: 500; letter-spacing: -.03em; }
 .mobile-navigation .mobile-join { margin-top: 24px; background: var(--mmc-red); color: white; padding: 12px 18px; }
 .chapter { padding: var(--mmc-section-space) var(--mmc-gutter); }
-.chapter > *, .opening-bottom > *, .intro-bottom > *, .circle-split > *, .footer-columns > * { min-width: 0; }
+.chapter > *, .opening-bottom > *, .library-session-layout > *, .circle-split > *, .footer-columns > * { min-width: 0; }
 .chapter-red { background: var(--mmc-paper); color: var(--mmc-ink); }
 .chapter-paper { background: var(--mmc-paper); color: var(--mmc-ink); }
 .chapter-mustard { background: var(--mmc-mustard); color: var(--mmc-ink); }
@@ -41,9 +41,9 @@ html.mmc-site body { font-family: Switzer, Arial, sans-serif; background: var(--
 .mmc-home { --mmc-accent: var(--mmc-ink); --mmc-red: var(--mmc-ink); --mmc-maroon: var(--mmc-ink); --mmc-surface: #e7eff6; }
 .mmc-home .home-opening { background: #fff; }
 .mmc-home .opening-title h1 span:last-child { color: var(--mmc-accent); }
-.mmc-home .game-chapter { background: var(--mmc-paper); }
+.mmc-home .game-chapter, .mmc-home .community-chapter, .mmc-home .home-volunteering { background: #fff; }
 .mmc-home .counter { background: var(--mmc-accent); }
-.mmc-home .people-chapter { background: var(--mmc-paper); }
+.mmc-home .people-chapter { background: var(--mmc-surface); }
 .mmc-home .big-index a { background: var(--mmc-surface); }
 .mmc-home .big-index a:hover { background: var(--mmc-accent); color: white; }
 .mmc-home .home-dark { background: var(--mmc-ink); color: var(--mmc-paper); }
@@ -65,7 +65,7 @@ html.mmc-site body { font-family: Switzer, Arial, sans-serif; background: var(--
 .opening-copy { padding-bottom: 32px; }
 .opening-copy p { max-width: 29ch; }
 .mmc-home .opening-note { font-size: 15px; line-height: 1.55; margin-top: 30px; margin-bottom: 0; }
-.opening-photo img { aspect-ratio: 1.95; object-fit: cover; }
+.opening-photo img { aspect-ratio: 3/2; object-fit: cover; object-position: center 18%; }
 .opening-photo figcaption { text-align: right; }
 .mmc-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; padding: 18px 24px; min-height: 60px; font: 500 18px/1.2 Switzer, sans-serif; text-decoration: none; transition: transform .18s ease-out, background-color .18s; }
 .button-paper { background: var(--mmc-paper); color: var(--mmc-ink); }
@@ -80,9 +80,8 @@ html.mmc-site body { font-family: Switzer, Arial, sans-serif; background: var(--
 .chapter-heading { display: grid; grid-template-columns: 7fr 5fr; align-items: end; gap: var(--mmc-layout-gap); margin-bottom: var(--mmc-content-gap); }
 .chapter-heading > p, .chapter-heading > div { max-width: 38ch; margin-bottom: 0; }
 .circle-intro .chapter-heading { grid-template-columns: 6fr 5fr; align-items: start; }
-.intro-bottom { display: grid; grid-template-columns: 6fr 5fr; gap: var(--mmc-layout-gap); align-items: start; }
-.intro-bottom img { aspect-ratio: 4/3; object-fit: cover; }
-.session-photo-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); margin-top: var(--mmc-content-gap); }
+.library-session-layout { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: var(--mmc-layout-gap); align-items: start; }
+.session-photo-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
 .session-photo-pair img { aspect-ratio: 4/3; object-fit: cover; object-position: center 30%; }
 .intro-text { max-width: 44ch; }
 .game-chapter { display: grid; grid-template-columns: 1fr 1fr; gap: var(--mmc-layout-gap); align-items: center; }
@@ -123,7 +122,7 @@ html.mmc-site body { font-family: Switzer, Arial, sans-serif; background: var(--
 .home-team-list a:hover > span:first-child { text-decoration: underline; }
 .home-questions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--mmc-layout-gap); }
 .home-faq-list { display: grid; gap: 12px; }
-.home-faq-list details { padding: 20px 24px; background: var(--mmc-surface); }
+.home-faq-list details { padding: 20px 24px; background: #fff; }
 .home-faq-list summary { cursor: pointer; font-size: 20px; line-height: 1.5; }
 .mmc-home .home-faq-list p { font-size: 18px; margin: 16px 0 0; }
 .home-faq-list p a { text-decoration: underline; }
@@ -279,6 +278,7 @@ html.mmc-site body { font-family: Switzer, Arial, sans-serif; background: var(--
   .footer-columns { gap: 24px; }
 }
 @media (max-width: 900px) {
+  .library-session-layout { grid-template-columns: 1fr; gap: 24px; }
   .circle-split { grid-template-columns: 1fr; }
   .circle-hero-photo { max-width: 720px; }
   .footer-columns { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -288,7 +288,7 @@ html.mmc-site body { font-family: Switzer, Arial, sans-serif; background: var(--
   .mmc-site main .featured-image { min-height: 0; aspect-ratio: 16/10; }
 }
 @media (max-width: 750px) {
-  .session-photo-pair { grid-template-columns: 1fr; gap: 24px; }
+  .session-photo-pair { gap: 16px; }
   .home-questions, .home-volunteering { grid-template-columns: 1fr; gap: 28px; }
   .home-team-list { grid-template-columns: 1fr; gap: 12px; margin-top: 28px; }
   .home-faq-list details { padding: 18px 20px; }
@@ -305,7 +305,7 @@ html.mmc-site body { font-family: Switzer, Arial, sans-serif; background: var(--
   .opening-photo { grid-row: 2; }
   .opening-copy .mmc-button { width: fit-content; }
   .mmc-home .opening-note { margin: 0; }
-  .chapter-heading, .circle-intro .chapter-heading, .community-chapter .chapter-heading, .intro-bottom, .game-chapter, .people-chapter, .interview-chapter, .circle-split, .team-member, .volunteer-invitation { grid-template-columns: 1fr; gap: 32px; }
+  .chapter-heading, .circle-intro .chapter-heading, .community-chapter .chapter-heading, .game-chapter, .people-chapter, .interview-chapter, .circle-split, .team-member, .volunteer-invitation { grid-template-columns: 1fr; gap: 32px; }
   .chapter-heading, .circle-intro .chapter-heading { gap: 24px; margin-bottom: 32px; }
   .chapter-heading > div > :last-child, .interview-chapter > div > :last-child { margin-bottom: 0; }
   .mmc-home h2 { font-size: clamp(38px, 9.2vw, 58px); }

@@ -20,7 +20,7 @@ export default function HomePage() {
             <p className="opening-note">A chapter of Orlando Math Circle.</p>
           </div>
           <figure className="opening-photo">
-            <Image src="/optimized/home-screen-photo.webp" alt="Melbourne Math Circle students and volunteers gathered in front of a whiteboard" width={1345} height={690} priority sizes="(max-width: 750px) 100vw, 65vw" />
+            <Image src="/optimized/Photos/monthly_meetings/13.webp" alt="Melbourne Math Circle students and volunteers gathered in front of a whiteboard" width={1080} height={1080} priority sizes="(max-width: 750px) 100vw, 65vw" />
             <figcaption>Students and volunteers after a library session.</figcaption>
           </figure>
         </div>
@@ -28,28 +28,13 @@ export default function HomePage() {
 
       <section className="chapter chapter-paper circle-intro">
         <div className="chapter-heading"><h2>Library sessions</h2><p>Our library sessions brought students and volunteers together to try problems and talk through the ideas behind them.</p></div>
-        <div className="intro-bottom">
-          <figure><Image src="/optimized/Photos/monthly_meetings/13.webp" alt="Melbourne Math Circle participants standing together in front of a whiteboard" width={1080} height={1080} sizes="(max-width: 750px) 100vw, 50vw" /><figcaption>A group photo from one of our monthly meetings.</figcaption></figure>
+        <div className="library-session-layout">
           <div className="intro-text"><p>We’d introduce a topic, then work through problems together. Students tried their own approaches, and volunteers stopped by to help when someone got stuck.</p></div>
+          <div className="session-photo-pair">
+            <figure><Image src="/optimized/Photos/monthly_meetings/1.webp" alt="A volunteer working through a number theory problem on the board during a library session" width={1080} height={1080} sizes="(max-width: 900px) 45vw, 25vw" /><figcaption>Number theory at the board.</figcaption></figure>
+            <figure><Image src="/optimized/Photos/monthly_meetings/5.webp" alt="A volunteer helping students with written math problems during a library session" width={1080} height={1080} sizes="(max-width: 900px) 45vw, 25vw" /><figcaption>Help with a problem.</figcaption></figure>
+          </div>
         </div>
-        <div className="session-photo-pair">
-          <figure><Image src="/optimized/Photos/monthly_meetings/1.webp" alt="A volunteer working through a number theory problem on the board during a library session" width={1080} height={1080} sizes="(max-width: 750px) 100vw, 50vw" /><figcaption>Number theory instruction during a library session.</figcaption></figure>
-          <figure><Image src="/optimized/Photos/monthly_meetings/5.webp" alt="A volunteer helping students with written math problems during a library session" width={1080} height={1080} sizes="(max-width: 750px) 100vw, 50vw" /><figcaption>Volunteer assistance during a library session.</figcaption></figure>
-        </div>
-      </section>
-
-      <section className="chapter chapter-mustard game-chapter" id="try-a-problem">
-        <div className="game-intro"><h2>Try a game</h2><p className="large-copy">Fifteen counters.<br />Take one, two, or three.<br />Whoever takes the last one wins.</p><p>You move first. After playing a round, try to explain which positions give you a winning move.</p><p className="game-context">Open the hint to see how groups of four determine the strategy.</p></div>
-        <CounterGame />
-      </section>
-
-      <section className="chapter chapter-paper explore-chapter home-dark">
-        <div className="chapter-heading"><h2>Some Math</h2><p>A problem to try, a short read, or a worksheet for later. It’s all in one place.</p></div>
-        <nav className="big-index" aria-label="Math materials">
-          <Link href="/some-math#topics"><span>Topics &amp; problems</span><span>Explanations and practice with hints</span><ArrowUpRight /></Link>
-          <Link href="/some-math#resources"><span>Resources</span><span>Books, handouts, videos, and tools</span><ArrowUpRight /></Link>
-          <Link href="/some-math#math-bites"><span>Math Bites</span><span>Short introductions for younger readers</span><ArrowUpRight /></Link>
-        </nav>
       </section>
 
       <section className="chapter chapter-slate community-chapter">
@@ -59,6 +44,26 @@ export default function HomePage() {
           <figure><Image src="/optimized/Photos/university_park/1.webp" alt="Student volunteers discussing a logic puzzle at University Park Elementary, with pupils’ faces covered in the original photo" width={1600} height={900} sizes="(max-width: 750px) 100vw, 50vw" /><figcaption>A logic puzzle at University Park Elementary.</figcaption></figure>
           <figure><Image src="/optimized/Photos/IndiaFest/2.webp" alt="Volunteers explaining a paper activity to children at the IndiaFest table" width={1080} height={1080} sizes="(max-width: 750px) 100vw, 50vw" /><figcaption>A paper activity at IndiaFest.</figcaption></figure>
           <figure><Image src="/optimized/Photos/IndiaFest/3.webp" alt="A student working on a worksheet with a volunteer at IndiaFest" width={1080} height={1080} sizes="(max-width: 750px) 100vw, 50vw" /><figcaption>Problem-solving activities at IndiaFest.</figcaption></figure>
+        </div>
+      </section>
+
+      <section className="chapter chapter-paper interview-chapter home-dark">
+        <div className="interview-copy">
+          <h2>Professor Kev Show</h2>
+          <p>An interview about Melbourne Math Circle’s program and work in Melbourne.</p>
+          <a href="https://www.youtube.com/watch?v=bwqcqY0FlEE" target="_blank" rel="noopener noreferrer" className="text-link">Watch on YouTube <ArrowUpRight size={20} /></a>
+        </div>
+        <div className="interview-preview">
+          <iframe
+            src="https://www.youtube.com/embed/bwqcqY0FlEE?rel=0"
+            title="Melbourne Math Circle on the Professor Kev Show"
+            width="560"
+            height="315"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
         </div>
       </section>
 
@@ -92,24 +97,18 @@ export default function HomePage() {
         </nav>
       </section>
 
-      <section className="chapter chapter-paper interview-chapter home-dark">
-        <div className="interview-copy">
-          <h2>Professor Kev Show</h2>
-          <p>An interview about Melbourne Math Circle’s program and work in Melbourne.</p>
-          <a href="https://www.youtube.com/watch?v=bwqcqY0FlEE" target="_blank" rel="noopener noreferrer" className="text-link">Watch on YouTube <ArrowUpRight size={20} /></a>
-        </div>
-        <div className="interview-preview">
-          <iframe
-            src="https://www.youtube.com/embed/bwqcqY0FlEE?rel=0"
-            title="Melbourne Math Circle on the Professor Kev Show"
-            width="560"
-            height="315"
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
-        </div>
+      <section className="chapter chapter-mustard game-chapter" id="try-a-problem">
+        <div className="game-intro"><h2>Try a game</h2><p className="large-copy">Fifteen counters.<br />Take one, two, or three.<br />Whoever takes the last one wins.</p><p>You move first. After playing a round, try to explain which positions give you a winning move.</p><p className="game-context">Open the hint to see how groups of four determine the strategy.</p></div>
+        <CounterGame />
+      </section>
+
+      <section className="chapter chapter-paper explore-chapter home-dark">
+        <div className="chapter-heading"><h2>Some Math</h2><p>A problem to try, a short read, or a worksheet for later. It’s all in one place.</p></div>
+        <nav className="big-index" aria-label="Math materials">
+          <Link href="/some-math#topics"><span>Topics &amp; problems</span><span>Explanations and practice with hints</span><ArrowUpRight /></Link>
+          <Link href="/some-math#resources"><span>Resources</span><span>Books, handouts, videos, and tools</span><ArrowUpRight /></Link>
+          <Link href="/some-math#math-bites"><span>Math Bites</span><span>Short introductions for younger readers</span><ArrowUpRight /></Link>
+        </nav>
       </section>
 
       <section className="chapter home-volunteering">
