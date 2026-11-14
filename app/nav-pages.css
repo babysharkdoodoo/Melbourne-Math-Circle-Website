@@ -358,3 +358,66 @@
  .archive-lightbox-controls { flex-wrap: wrap; justify-content: center; }
  .archive-lightbox-controls p { width: 100%; order: -1; }
 }
+
+/* The logo's white paper blends into the header without changing its artwork. */
+.wordmark-logo { mix-blend-mode: multiply; }
+.footer-contact > a[href^="mailto:"] { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+.footer-contact > a[href^="mailto:"] strong { font-size: 14px; font-weight: 500; }
+.footer-contact > a[href^="mailto:"] span { font-size: 15px; line-height: 1.5; }
+.mmc-home.volunteers-page > figure.volunteer-photo { margin: 0 var(--mmc-gutter) 36px 40px; }
+
+.gallery-archive .archive-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; }
+.gallery-archive .archive-grid figure:nth-child(n) { grid-column: auto; }
+.gallery-archive .archive-grid button { width: 100%; aspect-ratio: 4/3; display: block; position: relative; overflow: hidden; background: #e7eff6; }
+.gallery-archive .archive-grid button img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: contain; }
+.archive-lightbox-inner > img { width: auto; max-width: 100%; height: auto; max-height: calc(100dvh - 180px); object-fit: contain; margin-inline: auto; }
+
+.some-math-page .nav-hero { padding-bottom: 40px; }
+.math-tabs-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 var(--mmc-gutter) 24px; }
+.math-tab { min-height: 48px; padding: 12px 20px; border: 1px solid #12334f40; background: transparent; color: #12334f; font: 500 17px/1.3 Switzer, Arial, sans-serif; cursor: pointer; }
+.math-tab:hover { background: #e7eff6; }
+.math-tab[data-state="active"] { background: #12334f; border-color: #12334f; color: white; }
+.math-tab:focus-visible { outline: 2px solid #24587e; outline-offset: 4px; }
+.math-tab-panel[hidden] { display: none !important; }
+.math-panel-title { padding: 32px var(--mmc-gutter) 0; font-size: 36px !important; }
+.some-math-page .math-tab-panel .nav-section { padding-top: 32px; padding-bottom: 48px; }
+.some-math-page .math-tab-panel .topic-guide-featured { grid-column: auto; grid-template-columns: minmax(0, .7fr) minmax(0, 1fr); }
+.some-math-page .math-tab-panel .topic-guide-featured h2 { font-size: 36px; }
+.some-math-page .math-tab-panel .activity-preview { padding-block: 32px; }
+.some-math-page .math-tab-panel .activity-preview:first-child { border-top: 0; }
+.some-math-page .resources-layout { padding-top: 32px; }
+.some-math-page .bites-controls { padding-top: 24px; }
+.worksheet-questions, .worksheet-answers ol { list-style: decimal outside; }
+
+@media (max-width: 750px) {
+ .mmc-home.volunteers-page > figure.volunteer-photo { margin: 0 var(--mmc-gutter) 36px; }
+ .gallery-archive .archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
+ .math-tabs-list { gap: 8px; }
+ .math-tab { flex: 1 1 130px; font-size: 16px; padding: 12px; }
+ .math-panel-title { font-size: 30px !important; padding-top: 24px; }
+}
+@media (max-width: 480px) {
+ .gallery-archive .archive-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+ .some-math-page .math-tab-panel .topic-visual-grid { gap: 36px; }
+ .some-math-page .math-tab-panel .topic-guide { grid-template-columns: minmax(0, 100px) minmax(0, 1fr); gap: 20px; padding-bottom: 0; }
+ .some-math-page .math-tab-panel .topic-guide h2 { font-size: 25px; margin-top: 0; }
+ .some-math-page .math-tab-panel .topic-guide p { font-size: 16px; }
+}
+@media print {
+ html.mmc-site, .mmc-site body, .mmc-site main, .mmc-site .worksheet-page, .mmc-site .worksheet-sheet, .mmc-site .worksheet-answers { background: white !important; }
+ .mmc-site body > div.fixed { display: none !important; }
+ .worksheet-sheet .worksheet-heading { grid-template-columns: 1fr 110px; gap: 16px; }
+ .worksheet-sheet .worksheet-heading h1 { font-size: 22pt; line-height: 1.1; margin: 6px 0; }
+ .worksheet-sheet .worksheet-heading p { margin: 0 0 4px; font-size: 9pt; line-height: 1.3; }
+ .worksheet-sheet .worksheet-heading img { width: 110px; }
+ .worksheet-sheet .worksheet-name { margin: 14px 0 !important; font-size: 10pt !important; }
+ .worksheet-sheet > p { font-size: 10.5pt; line-height: 1.4; margin-bottom: 12px; }
+ .worksheet-sheet .worksheet-questions { padding-left: 22px; margin: 12px 0 0; }
+ .worksheet-sheet .worksheet-questions li { font-size: 10.5pt; line-height: 1.4; padding-left: 4px; margin-bottom: 12px; }
+ .worksheet-sheet .worksheet-workspace { height: 58px; margin: 8px 0 0; }
+ .worksheet-sheet .worksheet-answers { break-before: page; }
+ .worksheet-sheet .worksheet-answers h2 { font-size: 22pt; margin-bottom: 20px; }
+ .worksheet-sheet .worksheet-answers li { font-size: 11pt; line-height: 1.5; }
+}

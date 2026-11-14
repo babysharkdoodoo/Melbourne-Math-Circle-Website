@@ -5,9 +5,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {title:"Join us | Melbourne Math Circle",description:"Register for Melbourne Math Circle program updates. The monthly meeting series has concluded."};
 export default function JoinUsPage() {
  return <PageShell className="registration-page">
-  <PageHero title="Join us"><p>The monthly meeting series has concluded. Registration remains available for general program updates.</p></PageHero>
+  <PageHero title="Join us"><p>Our monthly library sessions have finished. You can still sign up to hear about future activities.</p></PageHero>
   <section className="nav-section registration-layout" id="register">
-   <aside className="registration-notes"><h2>Registration</h2><p data-motion>The form collects student, parent, and emergency contact information, followed by participation agreements.</p><p data-motion>Complete each section before submitting. Registration records your details with the chapter; it does not reserve an event place.</p><p data-motion>To ask about helping with activities, use the email contacts on the <Link href="/volunteers">volunteer page</Link>.</p></aside>
+   <aside className="registration-notes"><h2>Stay in the loop</h2><p data-motion>Fill out the form so we can keep in touch. We’ll ask for a parent’s contact details and the information we need for student activities.</p><p data-motion>There aren’t any monthly sessions to book right now. We’ll share details when there’s something new to join.</p><p data-motion>Want to volunteer? <Link href="/volunteers">Get in touch with Faizan</Link>.</p></aside>
    <div className="registration-surface"><RegistrationForm/></div>
   </section>
  </PageShell>;

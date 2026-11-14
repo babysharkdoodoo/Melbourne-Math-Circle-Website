@@ -15,7 +15,7 @@ export const activities = [
       "No. Taking 1, 2, or 3 leaves 3, 2, or 1. The other player can take the rest.",
       "1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 14, 15. Multiples of 4 are losing positions against perfect play.",
       "Take 3 to leave 12. After the other player takes k counters, take 4 − k. Each pair of turns removes 4, leaving 8, then 4, then 0 on your turn.",
-      "Multiples of 5: leave one of these totals after your turn, then make each pair of turns remove 5 counters.",
+      "Multiples of 5 are losing starting totals. When you start from any other total, leave a multiple of 5 after your turn, then make each pair of turns remove 5 counters.",
     ], guide: "/topics/game-theory", guideTitle: "Game theory",
   },
   {

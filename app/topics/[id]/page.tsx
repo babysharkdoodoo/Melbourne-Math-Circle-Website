@@ -20,7 +20,7 @@ const references:Record<string,{heading:string;name:string;url:string}>={
 export default async function TopicDetailPage({params}:Props) {
  const {id}=await params;const topic=getTopicById(id);if(!topic)notFound();const related=getRelatedTopics(id);
  return <PageShell className="reading-page topic-reading">
-  <section className="nav-hero reading-hero"><Link href="/topics" className="reading-back"><ArrowLeft size={17}/>Topic guides</Link><h1>{topic.title}</h1><p data-motion>{topic.description}</p><p className="reading-meta">Difficulty: {topic.level}</p></section>
+  <section className="nav-hero reading-hero"><Link href="/some-math#topics" className="reading-back"><ArrowLeft size={17}/>Topic guides</Link><h1>{topic.title}</h1><p data-motion>{topic.description}</p><p className="reading-meta">Difficulty: {topic.level}</p></section>
   <article className="nav-section reading-article"><figure className="reading-illustration"><Image src={topic.image} alt={topic.title+" diagram"} width={640} height={400} sizes="(max-width:650px) 100vw, 480px" priority/></figure>
    {topic.sections.map(section=><section className="reading-section" key={section.heading}><h2>{section.heading}</h2><p data-motion>{section.body}</p>{references[id]?.heading===section.heading&&<a className="reading-source" href={references[id].url} target="_blank" rel="noopener noreferrer">{references[id].name}</a>}</section>)}
    <section className="reading-section reading-problems"><h2>Practice problems</h2><ol>{topic.problems.map(problem=><li key={problem.question}><p>{problem.question}</p><details><summary>Show hint</summary><p>{problem.hint}</p></details></li>)}</ol></section>

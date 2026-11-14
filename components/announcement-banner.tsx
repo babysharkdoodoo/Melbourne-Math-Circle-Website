@@ -4,8 +4,8 @@ import { ArrowUpRight } from "lucide-react";
 export default function AnnouncementBanner() {
   return (
     <aside className="announcement-banner" aria-label="Announcement">
-      <p>Interested in volunteering? Email Faizan or Eshan.</p>
-      <Link href="/volunteers">Volunteer details <ArrowUpRight size={16} aria-hidden="true" /></Link>
+      <p>Want to volunteer? Get in touch with Faizan.</p>
+      <Link href="/volunteers">How to help <ArrowUpRight size={16} aria-hidden="true" /></Link>
     </aside>
   );
 }

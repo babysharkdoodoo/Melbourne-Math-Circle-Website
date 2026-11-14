@@ -582,7 +582,7 @@ export default function FunMathProblemsPage() {
             </div>
 
             <div style={{ maxWidth: 820, margin: "18px auto 0", display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-              <Link href="/topics" className="btn btn-secondary">
+              <Link href="/some-math#topics" className="btn btn-secondary">
                 Topic guides <ArrowRight size={14} />
               </Link>
               <Link href="/contact" className="btn btn-primary">

@@ -17,7 +17,7 @@ export default async function WorksheetPage({ params }: { params: Promise<{id: s
   if (!activity) notFound();
   return <div className="nav-page worksheet-page">
     <article className="worksheet-sheet">
-      <Link className="reading-back worksheet-back" href="/printable-activities">Back to printable activities</Link>
+      <Link className="reading-back worksheet-back" href="/some-math#worksheets">Back to printable activities</Link>
       <header className="worksheet-heading"><div><p>Melbourne Math Circle</p><h1>{activity.title}</h1><p>Materials: {activity.materials}</p></div><Image src={activity.image} alt={activity.alt} width={320} height={200}/></header>
       <p className="worksheet-name">Name: __________________________ Date: ______________</p>
       <p>{activity.introduction}</p>

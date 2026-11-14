@@ -62,6 +62,8 @@ lib/math-bites-data.ts  Article listings and search metadata
 public/Photos/          Outreach and activity photos
 public/pfps/            Team portraits
 public/images/math/     Educational diagrams
+public/optimized/       Compressed WebP copies used by the site
+scripts/optimize-photos.mjs  Rebuild compressed copies from the original photos
 ```
 
 ## Update content
@@ -72,6 +74,10 @@ public/images/math/     Educational diagrams
 - **Worksheets:** edit `lib/activities.ts`. Each entry supplies the worksheet, illustration, questions, and answer key.
 - **Announcements:** edit `components/announcement-banner.tsx`.
 - **Styles:** shared site styles are in `app/circle.css`; learning and supporting page styles are in `app/nav-pages.css`.
+
+The learning indexes share `/some-math`, with tabs for topics, Math Bites, worksheets, study plans, and resources. Older index URLs redirect to the matching tab; individual guide, article, and worksheet URLs still work.
+
+After adding or replacing an original photo, run `node scripts/optimize-photos.mjs` to regenerate its WebP copy in `public/optimized/`. The original photos are retained.
 
 Worksheets can be printed or saved as PDFs through the browser’s print dialog. The answer key is excluded until the reader selects **Show answer key**.
 
@@ -89,6 +95,6 @@ The existing Next.js configuration skips TypeScript and ESLint errors during pro
 
 ## Contact
 
-For questions about MMC or school outreach, email [Eshan Vipuil](mailto:eshan.mmc@orlandomathcircle.org). For volunteering, contact Eshan or [Faizan Ahmed](mailto:faizan@orlandomathcircle.org).
+For school visits or volunteering, email [Faizan Ahmed](mailto:faizan@orlandomathcircle.org). General questions can also go to [Eshan Vipuil](mailto:eshan.mmc@orlandomathcircle.org).
 
 Follow [Melbourne Math Circle on Instagram](https://www.instagram.com/melbournemathcircle_omc/).

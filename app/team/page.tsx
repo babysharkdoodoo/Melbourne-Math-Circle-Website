@@ -4,10 +4,10 @@ import { ArrowUpRight, Mail } from "lucide-react";
 import { teamMembers } from "@/lib/team";
 import { PageShell, PageHero } from "@/components/page-shell";
 import type { Metadata } from "next";
-export const metadata: Metadata = {title:"The people | Melbourne Math Circle",description:"The student volunteers, officers, and alumni behind Melbourne Math Circle."};
+export const metadata: Metadata = {title:"Team | Melbourne Math Circle",description:"The student volunteers, officers, and alumni behind Melbourne Math Circle."};
 export default function TeamPage() {
  return <PageShell className="team-directory-page">
-  <PageHero title="The people"><p>Student officers and volunteers, followed by the chapter’s alumni advisor.</p></PageHero>
+  <PageHero title="Team"><p>The students who run the circle, plan activities, and help at the table.</p></PageHero>
   <div className="nav-section team-directory" data-no-motion>
    {teamMembers.map((member,i) => <section key={member.name} id={member.name.toLowerCase().replace(/\s+/g,"-")} className="directory-member">
     {member.image === "/placeholder-user.jpg" ? <div className="directory-initials" aria-hidden="true">{member.name.split(" ").map(n=>n[0]).join("")}</div> : <figure><Image src={member.image} alt={member.name} width={300} height={360} sizes="(max-width:650px) 140px, 220px" priority={i===0}/></figure>}

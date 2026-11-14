@@ -5,7 +5,7 @@ export const teamMembers = [
     "grade": "Senior",
     "school": "West Shore Jr./Sr. High",
     "bio": "Eshan founded Melbourne Math Circle after taking part in Orlando Math Circle. He is a senior at West Shore Jr./Sr. High and leads the school’s MathCounts club. His interests in math and computer science also extend to medical AI research. Outside of school, he plays varsity tennis.",
-    "image": "/pfps/eshan.png",
+    "image": "/optimized/pfps/eshan.webp",
     "social": {
       "email": "eshan.mmc@orlandomathcircle.org",
       "linkedin": "eshan-vipuil-8042952a3"
@@ -17,7 +17,7 @@ export const teamMembers = [
     "grade": "Senior",
     "school": "West Shore Jr/Sr High",
     "bio": "Shoaib is a senior at West Shore who takes part in Future Problem Solving and Math Kangaroo. He enjoys working through challenging problems, volunteering, and playing basketball.",
-    "image": "/pfps/shoaib.png",
+    "image": "/optimized/pfps/shoaib.webp",
     "social": {
       "email": "shoaib.mmc@orlandomathcircle.org"
     }
@@ -28,7 +28,7 @@ export const teamMembers = [
     "grade": "Senior",
     "school": "West Shore Jr./Sr. High",
     "bio": "Sidharth is a senior at West Shore, an ISEF finalist, and a Future Problem Solving international qualifier. He enjoys math, basketball, and board games.",
-    "image": "/pfps/sid.jpg",
+    "image": "/optimized/pfps/sid.webp",
     "social": {}
   },
   {
@@ -36,8 +36,8 @@ export const teamMembers = [
     "role": "President-Elect",
     "grade": "Sophomore",
     "school": "West Shore Jr./Sr. High",
-    "bio": "Faizan helps Melbourne Math Circle expand its outreach to local schools, making mathematics more accessible to students. He is a sophomore at West Shore Jr./Sr. High and serves as MMC’s President-Elect. His interests in math and computer science also extend to medical AI research. Outside of school, he conducts biotechnology research at Alercell.",
-    "image": "/pfps/faizan.png",
+    "bio": "Faizan is a sophomore at West Shore Jr./Sr. High and MMC’s President-Elect. He helps organize outreach to local schools. He’s also interested in math, computer science, and medical AI, and conducts biotechnology research at Alercell.",
+    "image": "/optimized/pfps/faizan.webp",
     "social": {
       "email": "faizan@orlandomathcircle.org",
       "linkedin": "thefaizanak"
@@ -67,16 +67,16 @@ export const teamMembers = [
     "grade": "",
     "school": "West Shore Jr./Sr. High School",
     "bio": "Prithiv is a student at West Shore Jr./Sr. High School who enjoys math, science, and computer science. He has participated in science fairs and worked on research projects involving biology and technology. Outside of school, he enjoys coding, teaching math, and helping other students learn new concepts.",
-    "image": "/pfps/prithiv.png",
+    "image": "/optimized/pfps/prithiv.webp",
     "social": {}
   },
   {
     "name": "Kairav Kumar",
     "role": "Volunteer",
     "grade": "",
-    "school": "",
+    "school": "West Shore Jr./Sr. High",
     "bio": "Biography coming soon.",
-    "image": "/pfps/kairav.png",
+    "image": "/optimized/pfps/kairav.webp",
     "social": {}
   },
   {
@@ -85,7 +85,7 @@ export const teamMembers = [
     "grade": "",
     "school": "University of Florida",
     "bio": "Saaketh studies at the University of Florida, Class of 2029, with interests in computer science and finance. He has volunteered at Health First Palm Bay Hospital and enjoys tennis.",
-    "image": "/pfps/saaketh.png",
+    "image": "/optimized/pfps/saaketh.webp",
     "social": {
       "linkedin": "saaketh-kesireddy"
     }
